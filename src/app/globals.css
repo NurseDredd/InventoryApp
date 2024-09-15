@@ -4,18 +4,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
 
 body {
-  color: var(--foreground);
+  color: black;
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -24,4 +24,156 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* BEM CSS for component */
+
+
+.item-card {
+  max-width: 24rem; /* Tailwind's max-w-sm */
+  border-radius: 0.5rem; /* Tailwind's rounded */
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-lg */
+  background-color: white; /* Tailwind's bg-white */
+  padding: 1rem; /* Tailwind's p-4 */
+}
+
+.item-card__title {
+  font-weight: bold; /* Tailwind's font-bold */
+  font-size: 1.25rem; /* Tailwind's text-xl */
+  margin-bottom: 0.5rem; /* Tailwind's mb-2 */
+  color: #0a0a0a;
+}
+
+.item-card__detail {
+  color: #4a5568; /* Tailwind's text-gray-700 */
+  font-size: 1rem; /* Tailwind's text-base */
+  margin-bottom: 0.5rem; /* Add some spacing between details */
+}
+
+.item-card__label {
+  font-weight: 600; /* Tailwind's font-semibold */
+}
+
+/* Block: form */
+.form {
+  /* width: 100%; */
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap:5px;
+}
+
+/* Element: form__group */
+.form__group {
+  margin-bottom: 15px;
+}
+
+/* Element: form__label */
+.form__label {
+  color: #171717;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Element: form__input */
+.form__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form__input::placeholder {
+  color: #b12323; /* Ändra till önskad färg */
+  opacity: 1; /* För att undvika nedtoning av färgen */
+}
+
+/* Element: form__button */
+.form__button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Modifier: form__button--primary */
+.form__button--primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Modifier: form__button--secondary */
+.form__button--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Element: form__text */
+.form__text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.btn-container {
+  width: 30%;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.editBtn, .deleteBtn {
+  color: #0a0a0a;
+  padding: 0.2rem;
+  border-radius: 4px;
+  border: 2px solid black;
+}
+
+.hidden {
+  display:block;
+}
+
+/* Primary login button styles */
+.form__button--primary-login {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.form__button--primary-login:hover {
+  background-color: #0056b3;
+}
+
+/* Secondary register button styles */
+.form__button--secondary-register {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.form__button--secondary-register:hover {
+  background-color: #5a6268;
+}
+
+
+.filterContainer {
+  width: 24rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+
+}
+.form-checkbox {
+  margin-left: 5px;
 }
